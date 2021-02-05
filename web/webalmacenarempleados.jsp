@@ -17,6 +17,26 @@ controlleremp.setSession(session);
         
     </head>
     <body>
+        <ul>
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="webalmacenarempleados.jsp">
+                    Almacenar empleados
+                </a>
+            </li>
+            <li>
+                <a href="webmostrarempleadossession.jsp">
+                    MOSTRAR EMPLEADOS SESSION
+                </a>
+            </li>
+            <li>
+                <a href="proteccion/usuarioempleado.jsp">
+                    ZONA Empleado
+                </a>
+            </li>
+        </ul>
         <%
             //aqui recuperaremos la session
         String idempleado = request.getParameter("idempleado");
