@@ -16,11 +16,36 @@ controlleremp.setSession(session);
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <a href="includes/webseguridadempleadosmenu.jsp"></a>
+       
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>MOSTRAR</title>
+        
     </head>
     <body>
+
         <h1>Mostrar</h1>
+        <ul>
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+            <li>
+                <a href="webalmacenarempleados.jsp">
+                    Almacenar empleados
+                </a>
+            </li>
+            <li>
+                <a href="webmostrarempleadossession.jsp">
+                    MOSTRAR EMPLEADOS SESSION
+                </a>
+            </li>
+            <li>
+                <a href="proteccion/usuarioempleado.jsp">
+                    ZONA Empleado
+                </a>
+            </li>
+        </ul>
         <%
         String eliminar =request.getParameter("eliminar");
         if(eliminar != null){
@@ -33,22 +58,11 @@ controlleremp.setSession(session);
         </a>
         </button>
        
-         <table border="1">
-            <thead>
-                <tr>
-                   
-                    <th>APELLIDO</th>
-                    <th>OFICIO</th>
-                    <th>SALARIO</th>
-                    <th>DEPT</th>
-                     <th></th>
-                     <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
+      <%=controlleremp.getEmpleadosSession()%>
         
     </body>
+    <script src="js/jquery-3.5.1.min.js" type="text/javascript"></script>
+    <script src="js/Chart.bundle.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.8.3.js" type="text/javascript"></script>
+
 </html>
